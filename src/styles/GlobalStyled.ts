@@ -26,6 +26,9 @@ export const GlobalStyled = createGlobalStyle`
     ul{
         list-style:none;
     }
+    section{
+        padding:100px 0;
+    }
     button{
         background-color: unset;
         border: none;
