@@ -7,23 +7,31 @@ import {Work} from "./work/Work";
 import socialImg from "../../../assets/images/project-1.webp"
 import timerImg from "../../../assets/images/project-2.webp"
 import {HeaderMenu} from "../../header/headerMenu/HeaderMenu";
+import {TabMenu} from "./tabmenu/TabMenu";
+import {Container} from "../../../styles/Container";
 
 const workItems = ["All", "Landing Page", "React", "Spa"]
 
 export const Works = () => {
     return (
         <StyledWorks>
-            <SectionTitle>My works</SectionTitle>
-            <HeaderMenu menuItems={workItems}/>
-            <FlexWrapper justify={"space-around"}>
-                <Work title={"Social Network"} text={"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit."} src={socialImg}/>
-                <Work title={"Timer"} text={"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit."} src={timerImg}/>
-            </FlexWrapper>
+            <Container>
+                <SectionTitle>My works</SectionTitle>
+                <TabMenu menuItems={workItems}/>
+                <FlexWrapper justify={"space-between"} align={"flex-start"}>
+                    <Work title={"Social Network"}
+                          text={"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit."}
+                          src={socialImg}/>
+                    <Work title={"Timer"}
+                          text={"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit."}
+                          src={timerImg}/>
+                </FlexWrapper>
+            </Container>
+
         </StyledWorks>
     );
 };
 const StyledWorks = styled.section`
-    min-height: 100vh;
-    background-color: #deefff;
+
 `
 

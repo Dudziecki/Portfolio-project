@@ -22,6 +22,8 @@ export const GlobalStyled = createGlobalStyle`
     }
     a{
         text-decoration: none;
+        color:${theme.colors.textColor};
+        text-transform: uppercase;
     }
     ul{
         list-style:none;
@@ -32,6 +34,8 @@ export const GlobalStyled = createGlobalStyle`
     button{
         background-color: unset;
         border: none;
+        cursor: pointer;
+        color:${theme.colors.textColor};
     }
     section:nth-of-type(odd){
         background-color: ${theme.colors.primaryBg};
