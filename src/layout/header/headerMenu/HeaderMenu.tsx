@@ -36,7 +36,7 @@ const Link = styled.a`
     font-family:"Josefin Sans", sans-serif;
     font-weight: 400;
     font-size: 20px;
-    color:${theme.colors.accent};
+    color:transparent;
     
 `
 const Mask = styled.span`
@@ -58,10 +58,35 @@ const Mask = styled.span`
 `
 const ListItem = styled.li`
     position: relative;
-    
-    &:hover{
-        ${Mask}{
-            transform:skewX(12deg);
+
+    &::before {
+        content: '';
+        display: inline-block;
+        height: 3px;
+        background-color: ${theme.colors.accent};
+
+        position: absolute;
+        top: 50%;
+        left: -10px;
+        right: -10px;
+        z-index: 1;
+        transform: scale(0);
+    }
+
+    &:hover {
+        &::before {
+            transform: scale(1);
         }
+
+        ${Mask} {
+            transform: skewX(12deg) translateX(3px);
+            color: ${theme.colors.textColor};
+
+            & + ${Mask} {
+                transform: skewX(12deg) translateX(-3px);
+            }
+        }
+
+
     }
 `
