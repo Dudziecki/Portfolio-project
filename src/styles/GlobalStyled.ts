@@ -24,6 +24,7 @@ export const GlobalStyled = createGlobalStyle`
         text-decoration: none;
         color:${theme.colors.textColor};
         text-transform: uppercase;
+        cursor:pointer;
     }
     ul{
         list-style:none;
