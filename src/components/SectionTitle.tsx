@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from "styled-components";
 import {theme} from "../styles/Theme";
+import {font} from "../styles/Common";
 
 export const SectionTitle = styled.h2`
-    font-family:  "Josefin Sans", sans-serif;;
-    font-weight: 600;
-    font-size: 36px;
+    ${font({family:" 'Josefin Sans', sans-serif",weight:600,Fmax:36,Fmin:30 })};
+   
     letter-spacing: 0.14em;
     text-align: center;
     margin-bottom: 90px;
@@ -23,6 +23,9 @@ export const SectionTitle = styled.h2`
         left:50%;
         bottom:-30px;
         transform: translateX(-50%);
+        @media ${theme.media.tablet} {
+            bottom:-24px;
+        }
     }
 `
 
