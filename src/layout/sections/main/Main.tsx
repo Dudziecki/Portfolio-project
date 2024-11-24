@@ -80,6 +80,8 @@ const MainTitle = styled.h1`
 const SmallText = styled.span`
     font-weight: 400;
     font-size: 14px;
+    display: inline-block;
+    margin-top:15px;
    
     
 `
