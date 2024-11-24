@@ -6,7 +6,7 @@ import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Work} from "./work/Work";
 import socialImg from "../../../assets/images/project-1.webp"
 import timerImg from "../../../assets/images/project-2.webp"
-import {HeaderMenu} from "../../header/headerMenu/HeaderMenu";
+
 import {TabMenu} from "./tabmenu/TabMenu";
 import {Container} from "../../../styles/Container";
 
