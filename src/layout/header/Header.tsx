@@ -23,12 +23,12 @@ export const Header: React.FC = () => {
     return (
         <S.Header>
             <Container>
-                <FlexWrapper justify="space-between" align={"center"}>
-                    <Logo/>
-                    {width < breakpoint? <MobileMenu menuItems={Items}/>
-                        : <DesktopMenu menuItems={Items}/>}
-
-                </FlexWrapper>
+                    <FlexWrapper justify="space-between" align={"center"}>
+                        <Logo/>
+                        {width < breakpoint? <MobileMenu menuItems={Items}/>
+                            : <DesktopMenu menuItems={Items}/>}
+    
+                    </FlexWrapper>
 
             </Container>
 
