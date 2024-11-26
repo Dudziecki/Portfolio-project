@@ -1,9 +1,14 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import {theme} from "../styles/Theme";
 
-export const Link = styled.a`
+export const Link = styled.a<{active?:boolean}>`
     position: relative;
     z-index:0;
+    padding: 10px;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.07em;
+    
     &::before {
         content: '';
         display: inline-block;
@@ -16,6 +21,9 @@ export const Link = styled.a`
         left: 0;
         right: 0;
         z-index:-1;
+        ${props => props.active && css<{active?:boolean}>`
+            height: 10px;
+        `
     }
     &:hover{
         &::before{
@@ -23,8 +31,5 @@ export const Link = styled.a`
         }
     }
 
-    padding: 10px;
-    font-weight: 400;
-    font-size: 14px;
-    letter-spacing: 0.07em;
+  
 `
