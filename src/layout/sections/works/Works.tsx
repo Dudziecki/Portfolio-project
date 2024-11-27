@@ -44,6 +44,7 @@ const worksData = [
         type: "react"
 
     },
+
 ];
 
 
@@ -74,6 +75,7 @@ export const Works: React.FC = () => {
                             <Work title={w.title}
                                   text={w.text}
                                   src={w.src}/>
+
                         )
                     })}
 
