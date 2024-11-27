@@ -4,9 +4,14 @@ import {theme} from "../../styles/Theme";
 const Slider = styled.div`
 
     max-width: 500px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    cursor:grab;
+    &:active{
+        cursor:grabbing;
+    }
 `
 const Slide = styled.div`
     text-align: center;`
@@ -21,33 +26,11 @@ const Name = styled.span`
     display: inline-block;
     margin: 22px 0 42px;
 `
-const Pagination = styled.div `
-    span {
-        display: inline-block;
-        border-radius: 20px;
-        width: 7px;
-        height: 7px;
 
-        background-color: rgba(255, 255, 255, 0.5);
-        
-        & + span {
-            margin-left: 5px;
-        }
-
-        &.active {
-            width: 20px;
-            height: 7px;
-            background-color: ${theme.colors.accent};
-        }
-
-    }
-
-   
-`
 export const S={
     Slider,
     Slide,
     Text,
     Name,
-    Pagination
+
 }
