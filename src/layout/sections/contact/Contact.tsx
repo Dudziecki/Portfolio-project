@@ -7,7 +7,7 @@ import {Container} from "../../../styles/Container";
 
 export const Contact:React.FC = () => {
     return (
-        <S.Contact>
+        <S.Contact id={'contacts'}>
             <Container>
                 <SectionTitle>Contact</SectionTitle>
                 <S.Form>
