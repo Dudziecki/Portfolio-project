@@ -51,6 +51,10 @@ const MainTitle = styled.h1`
     
     ${font({weight:400,Fmax:27,Fmin:20})};
     
+    p{
+        display:none;
+    }
+    
 `
 const SmallText = styled.span`
     font-weight: 400;
