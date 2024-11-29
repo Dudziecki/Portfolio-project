@@ -17,6 +17,8 @@ const Mask = styled.span`
     overflow-y: hidden;
     //outline:1px solid red;
     color: ${theme.colors.accent};
+    transition: ${theme.animations.transition};
+    
 
     & + & {
         top: 50%;
@@ -32,6 +34,7 @@ const NavLink = styled(Link)`
     font-weight: 400;
     font-size: 20px;
     color: transparent;
+    transition: ${theme.animations.transition};
     
     &::before {
         content: '';
@@ -128,30 +131,35 @@ const BurgerMenu = styled.button<{isOpened:boolean}>`
 
 `
 const MobileMenuPopup= styled.div<{isOpened:boolean}>`
-     position:fixed;
-     left: 0;
-     bottom: 0;
-     right: 0;
-     top: 0;
-     background-color: rgba(31, 31, 32, 0.9);
-     display:none;
-     z-index:99999;
-     ul{
-         display:flex;
-         flex-direction: column;
-         align-items: center;
-     }
-     
-     ${props => props.isOpened && css<{isOpened:boolean}>`
-        display:flex;
-         justify-content: center;
-         align-items: center;
-     `}
-     ul {
-         display: flex;
-         gap: 20px;
-     }
- `
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    background-color: rgba(31, 31, 32, 0.9);
+
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    transform: translateY(-100%);
+    transition:1s ease-in-out;
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    ${props => props.isOpened && css<{ isOpened: boolean }>`
+        transform: translateY(0);
+       
+    `}
+    ul {
+        display: flex;
+        gap: 20px;
+    }
+`
 // Desktop Menu
 
 const DesktopMenu = styled.nav`
