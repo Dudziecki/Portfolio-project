@@ -37,6 +37,7 @@ export const Menu: React.FC<MenuProps> = ({closeMenu}) => {
                         smooth={true}
                         activeClass="active"
                         spy={true}
+                        offset={-70}
                         onClick={closeMenu}
                     >
                         {item.title}
