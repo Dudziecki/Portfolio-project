@@ -43,7 +43,7 @@ export const Skills = () => {
         <S.Skills id={'skills'}>
             <Container>
                 <SectionTitle>My Skills</SectionTitle>
-                <FlexWrapper wrap={"wrap"} justify={"space-between"}>
+                <FlexWrapper wrap={"wrap"} justify={"center"}>
                     <Fade cascade={true} damping={0.2}>
                         {skillData.map((s,index)=>{
                             return (
